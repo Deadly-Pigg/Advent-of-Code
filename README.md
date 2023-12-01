@@ -5,6 +5,6 @@ Is a storage unit for all my advent of code solutions for 2023. This time there 
 Example of others who do Advent of Code: 
 
 ###@mohfez
-###@VictorVictini (https://stackoverflow.com)[website]
+###@VictorVictini (website2)[https://stackoverflow.com](website)
 
 (they have better solutions than mine, since they have been coding far longer than I)
