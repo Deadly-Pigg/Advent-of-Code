@@ -1,10 +1,17 @@
 # Advent-of-Code-2023
-This is even worse than last year
+(This is even worse than last year)
 
-Is a storage unit for all my advent of code solutions for 2023. This time there will be comments as I actually care about readability this time... kind of. I'd suggest having a go at the problems yourself beforehand and then comparing it with my (or others) solutions.
+## Description
+This repository is a storage unit for all my advent of code solutions for 2023. This time there will be comments as I actually care about readability this time... kind of. 
+I'd suggest having a go at the problems yourself beforehand and then comparing it with my (or others) solutions.
+
+## My review of this years Advent of Code
+Can't criticise just yet, but I must admit, day 1 was a pain to handle (specifically part 2)
+
+## Miscellanous
 Example of others who do Advent of Code: 
 
-###@mohfez
-###@VictorVictini (website2)[https://stackoverflow.com](website)
+#### [@mohfez](https://github.com/mohfez/Advent-of-code-2023)
+#### [@VictorVictini](https://github.com/VictorVictini/advent_of_code_2023)
 
 (they have better solutions than mine, since they have been coding far longer than I)
