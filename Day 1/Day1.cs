@@ -24,11 +24,11 @@ public class Day1
         int boundary = -1;
         int lastBoundary = -1;
 
-        StringBuilder last = new StringBuilder(); 
+        StringBuilder last = new StringBuilder();
         StringBuilder first = new StringBuilder();
 
         /*boundaries for the strings. basically, if a string has a sequence like 'o1seven...', we want the boundary to end at 1, as that's the number 
-        * we're going to use in the final sum, so there's no need to convert seven.*/
+        * we're going to use in the final sum, so there's no need to convert seven in this hypothetical scenario*/
         for (int i = 0; i < length; i++) {         
             int temp = newline[i] - '0';
             if (temp >= 1 && temp <= 9) {
