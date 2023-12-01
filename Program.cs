@@ -1,6 +1,6 @@
 ﻿//This is a running log of all the days and their answers. It will output each day (that I have completed) and their seperate parts individually
 //if you wish to test each day individually, comment out other days lines
-//and finally, if you want to test it against your input (cheater), then replace the text in the individual bins of each folder. Hope you enjoy
+//and finally, if you want to test it against your input (cheater), then replace the text in the individual bins of each folder. Hope you enjoy!
 
 //Credit goes to @mohfez on github for the idea
 
