@@ -8,4 +8,4 @@
 Console.WriteLine($"Day: 1:   \n- part 1: {new Day1().Answer(1)}, part 2: {new Day1().Answer(2)}\n\n");
 
 //Day 2
-Console.WriteLine($"Day: 2:   \n- part 1: {new Day2().Answer(1)}, part 2: {new Day2().Answer(2)}\n\n");
+//Console.WriteLine($"Day: 2:   \n- part 1: {new Day2().Answer(1)}, part 2: {new Day2().Answer(2)}\n\n");
