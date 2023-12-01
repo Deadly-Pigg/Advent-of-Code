@@ -4,14 +4,14 @@ public class Day1
 {
     private string[] replaceValues = { "nine", "eight", "seven", "six", "five", "four", "three", "two", "one" };   
     private string[] toReplaceTo = { "9", "8", "7", "6", "5", "4", "3", "2", "1" };
-    public int Answer(int part) {
+    public int Answer(bool part2) {
         string[] file = File.ReadAllLines("AoC1.txt"); //reading from file in the bin
         
         int sum = 0;
 
         foreach (string line in file) { //loops through each line in the input
         string newline = line;
-        if(part == 2)
+        if(part2)
             newline = ReplaceFirst(line); //part 2, comment out for part 1.
         newline = Regex.Replace(newline, @"\D", ""); //gets rid of all non-integer characters
         sum += 10 * (newline[0] - '0') + (newline[newline.Length - 1] - '0'); //takes first and last number, and adds them to the sum.
