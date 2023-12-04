@@ -12,6 +12,8 @@ Day 2 was far easier. Because I can't read, the description caught me a little o
 
 Day 3 was also easy. Grid problems are always the bane of my existence on advent of code, though.
 
+Day 4... Regex carried a lot here. Probably the easiest by far to deal with. All of them feel like parsing problems, though.
+
 ## Miscellanous
 Example of others who do Advent of Code: 
 
