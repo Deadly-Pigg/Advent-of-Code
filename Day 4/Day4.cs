@@ -3,7 +3,7 @@ public class Day4
 {
     public int Answer(bool part2) 
     {
-        string[] file = File.ReadAllLines("AoC4.txt"); //VictorVictini is col. Also, 
+        string[] file = File.ReadAllLines("AoC4.txt"); //VictorVictini is col.
         Dictionary<int, int> dict = new Dictionary<int, int>(); //for part 2
         int sum = 0;
 
