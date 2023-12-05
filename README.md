@@ -22,5 +22,8 @@ Example of others who do Advent of Code:
 
 (they have better solutions than mine, since they have been coding far longer than I)
 
-PS. if you're uploading your puzzle inputs alongside your code, I'd suggest removing it. Most people look at the code anyway, and bad actors can use it to clone/steal the website (via reverse engineering)
+PS. if you're uploading your puzzle inputs alongside your code, I'd suggest removing it. Most people look at the code over the inputs anyway, and bad actors can use it to clone/steal the website (via reverse engineering)
+
 [source](https://www.reddit.com/r/adventofcode/wiki/faqs/copyright/inputs/)
+
+If it passes the testcase provided by the website but not your puzzle input (happened to me for day 1 part 2), try looking around for example testcases people have created, or asking why your code doesn't work. Good luck and have fun with this years Advent of Code!
