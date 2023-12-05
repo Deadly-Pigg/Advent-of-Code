@@ -10,9 +10,11 @@ Can't criticise just yet, but I must admit, day 1 was a pain to handle (specific
 
 Day 2 was far easier. Because I can't read, the description caught me a little off guard, but both parts were reasonable this time
 
-Day 3 was also easy. Grid problems are always the bane of my existence on advent of code, though.
+Day 3 was... medium. Grid problems are always the bane of my existence on advent of code, though.
 
 Day 4... Regex carried a lot here. Probably the easiest by far to deal with. All of them feel like parsing problems, though.
+
+Day 5 was hard. Part 1's description threw me off for a bit, and part 2 was awful since I knew I couldn't just brute-force my way to the answer. I got it though, but I really hope the next few days are easier for my sanity
 
 ## Miscellanous
 Example of others who do Advent of Code: 
