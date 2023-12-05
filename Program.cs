@@ -15,5 +15,9 @@
 //Console.WriteLine($"Day: 3:   \n- part 1: {new Day3().Answer(false)}, part 2: {new Day3().Answer(true)}\n\n");
 
 //Day 4
-Console.WriteLine($"Day: 4:   \n- part 1: {new Day4().Answer(false)}, part 2: {new Day4().Answer(true)}\n\n");
+//Console.WriteLine($"Day: 4:   \n- part 1: {new Day4().Answer(false)}, part 2: {new Day4().Answer(true)}\n\n");
+
+//Day 5
+Console.WriteLine($"Day: 5:   \n- part 1: {new Day5().Answer(false)}, part 2: {new Day5().Answer(true)}\n\n");
+
 
