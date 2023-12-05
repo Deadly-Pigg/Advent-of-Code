@@ -21,3 +21,6 @@ Example of others who do Advent of Code:
 #### [@VictorVictini](https://github.com/VictorVictini/advent_of_code_2023)
 
 (they have better solutions than mine, since they have been coding far longer than I)
+
+PS. if you're uploading your puzzle inputs alongside your code, I'd suggest removing it. Most people look at the code anyway, and bad actors can use it to clone/steal the website (via reverse engineering)
+[source](https://www.reddit.com/r/adventofcode/wiki/faqs/copyright/inputs/)
