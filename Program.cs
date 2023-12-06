@@ -3,21 +3,25 @@
 //if you are stuck, I'd suggesting using the testcases that are provided by the website (or, if you are really stuck, compare your code with mine, or just try and understand the approach I used). 
 //I purged my puzzle inputs from the github, and if you are curious why, read the README.md document.
 
-//Credit goes to @mohfez on github for the idea
+//Credit goes to @mohfez for the initial idea and @VictorVictini for the improvement (both on github)
 
-//Day 1
-//Console.WriteLine($"Day: 1:   \n- part 1: {new Day1().Answer(false)}, part 2: {new Day1().Answer(true)}\n\n");
+new Day0().OutputValues(); //for initialising the 'Days' program. You can ignore this as it just ensures the benchmark works as intended.
 
-//Day 2
-//Console.WriteLine($"Day: 2:   \n- part 1: {new Day2().Answer(false)}, part 2: {new Day2().Answer(true)}\n\n");
+Console.WriteLine("\nDay 1:");
+new Day1().OutputValues();
 
-//Day 3
-//Console.WriteLine($"Day: 3:   \n- part 1: {new Day3().Answer(false)}, part 2: {new Day3().Answer(true)}\n\n");
+Console.WriteLine("\nDay 2:");
+new Day2().OutputValues();
 
-//Day 4
-//Console.WriteLine($"Day: 4:   \n- part 1: {new Day4().Answer(false)}, part 2: {new Day4().Answer(true)}\n\n");
+Console.WriteLine("\nDay 3:");
+new Day3().OutputValues();
 
-//Day 5
-Console.WriteLine($"Day: 5:   \n- part 1: {new Day5().Answer(false)}, part 2: {new Day5().Answer(true)}\n\n");
+Console.WriteLine("\nDay 4:");
+new Day4().OutputValues();
 
+Console.WriteLine("\nDay 5:");
+new Day5().OutputValues();
+
+Console.WriteLine("\nDay 6:");
+new Day6().OutputValues();
 
