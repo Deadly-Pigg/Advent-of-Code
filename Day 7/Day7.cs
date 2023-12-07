@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 public class Day7 : Days<long>
 {
     public struct CardData
@@ -12,7 +12,7 @@ public class Day7 : Days<long>
         }
     }
     Dictionary<int, List<CardData>> handTypes = new();
-    Dictionary<char, int> values = new Dictionary<char, int>()
+    Dictionary<char, int> cardValues = new Dictionary<char, int>()
         {
             {'2', 2},
             {'3', 3},
@@ -31,19 +31,20 @@ public class Day7 : Days<long>
 
     public override long Answer(bool part2) 
     { 
-        if(part2)
-            values['J'] = 1; //part 2 states that the value of the 'Joker' card should be the lowest
         long sum = 0;
         int rank = 1;
 
         string[] file = File.ReadAllLines("AoC7.txt"); 
+        
+        if(part2)
+            cardValues['J'] = 1; //part 2 states that the value of the 'Joker' card should be the lowest
 
         if(handTypes.Count != 0)
             handTypes.Clear(); //need to ensure the dictionary is clear since both parts are executed in conjunction
 
-        Parse(file, part2);
-        
-        for(int i = 0; i < 7; i++) {
+        Parse(file, part2); //for storing and sorting the decks' value and worth
+
+        for(int i = 0; i < 7; i++) { //goes from lowest rank to highest, adding their strength to the sum
             List<CardData> dict = handTypes[i];
             foreach(CardData value in dict)
             {
@@ -57,26 +58,78 @@ public class Day7 : Days<long>
 
     private void Parse(string[] file, bool part2) 
     {
-        List<CardData>[] cards = new List<CardData>[7];
-        for(int i = 0; i < 7; i++)
-            cards[i] = new List<CardData>();
+        List<CardData>[] decks = new List<CardData>[7]; //an array of list. each list stores deck data, but they are split into separate lists for the types of hands.
 
-        for(int i = 0; i < file.Length; i++) 
+        for(int i = 0; i < 7; i++)
+            decks[i] = new List<CardData>();
+
+        for(int i = 0; i < file.Length; i++) //reads the input and stores it in the lists (base-15 card values + their worth)
         {
-            MatchCollection regex = Regex.Matches(file[i], @"^\w+(?! ).|\d+$");
-            int hand = HandType(regex[0].Value, part2);
-            cards[hand].Add(new CardData(int.Parse(regex[1].Value), AssignValues(regex[0].Value)));
+            string[] input = file[i].Split(" ");
+            int hand = HandType(input[0], part2);
+            decks[hand].Add(new CardData(int.Parse(input[1]), AssignValues(input[0])));
         }
 
-        for(int i = 0; i < 7; i++)
+        for(int i = 0; i < 7; i++) //sorting the cards in an appropriate order
         {
-            MergeSort(cards[i], 0, cards[i].Count-1);
-            handTypes.Add(i, cards[i]);
+            MergeSort(decks[i], 0, decks[i].Count-1);
+            handTypes.Add(i, decks[i]);
         }
     }
 
-    private void MergeSort(List<CardData> dict, int start, int end)
+    private int HandType(string value, bool part2) //Basically counts each type of card and the amount of them, returning the count of the majority card.
+    { //also stores the 2nd majority, but that's just for 2 pair/full house.
+        int max = 0;
+        int secondMax = 0;
+        int jokers = 0;
+
+        Dictionary<char,int> dict = new();
+
+        for(int i = 0; i < 5; i++)
+        {
+            if(value[i] == 'J' && part2) //since joker cards can be anything, we store them seperately.
+            {
+                jokers++;
+                continue;
+            }
+            if(dict.ContainsKey(value[i]))
+            {
+                dict[value[i]]++;
+                if(dict[value[i]] > max)
+                    max = dict[value[i]];
+                else if(dict[value[i]] > secondMax)
+                    secondMax = dict[value[i]];
+                continue;
+            }
+            if(max == 0)
+                max = 1;
+            dict[value[i]] = 1;
+        }
+
+        max += jokers;
+        if(max > 3) //4/5 of a kind
+            return max+1;
+        else if(max == 3) //3 of a kind / full house
+            return max + (secondMax == 2 ? 1 : 0);
+        return max - (secondMax == 2 ? 0 : 1); //2 pair / pair / highest card
+    }
+
+    private int AssignValues(string deck) //basically converts the cards from a weird base-15 to denary so that sorting is easier (we need to sort to get the lowest label -> highest anyway)
     {
+        int cardsValue = 0;
+        int multi = 1;
+        for(int i = deck.Length-1; i >= 0; i--)
+        {
+            cardsValue += cardValues[deck[i]] * multi;
+            multi *= 15;
+        }
+        return cardsValue;
+    }
+
+
+
+    private void MergeSort(List<CardData> dict, int start, int end)//sorting algo. Kinda copy-pasted tbf, but I added changes because certain parts of the merge-sort algo provided on google made no sense.
+    { //I'd suggest reading off google for merge sort.
         if(start >= end)
             return;
         int mid = (end + start) / 2;
@@ -88,10 +141,11 @@ public class Day7 : Days<long>
     {
         int leftLen = mid - start + 1;
         int rightLen = end - mid;
+
         CardData[] left = new CardData[leftLen];
         CardData[] right= new CardData[rightLen];
-        int i;
-        int leftInd = 0, rightInd = 0;
+
+        int i, leftInd = 0, rightInd = 0;
 
         for(i = 0; i < leftLen; i++)
             left[i] = list[start + i];
@@ -114,52 +168,5 @@ public class Day7 : Days<long>
 
         while(rightInd < rightLen)
             list[i++] = right[rightInd++];
-    }
-
-    private int HandType(string value, bool part2)
-    {
-        int max = 0;
-        int max2 = 0;
-        int jCount = 0;
-        Dictionary<char,int> dict = new();
-        for(int i = 0; i < 5; i++)
-        {
-            if(value[i] == 'J' && part2)
-            {
-                jCount++;
-                continue;
-            }
-            if(dict.ContainsKey(value[i])) 
-            {
-                dict[value[i]]++;
-                if(dict[value[i]] > max)
-                    max = dict[value[i]];
-                else if(dict[value[i]] > max2)
-                    max2 = dict[value[i]];
-                continue;
-            }
-            if(max == 0)
-                max = 1;
-            dict[value[i]] = 1;
-        }
-
-        max += jCount;
-        if(max > 3)
-            return max+1;
-        else if(max == 3)
-            return max + (max2 == 2 ? 1 : 0);
-        return max - (max2 == 2 ? 0 : 1);
-    }
-
-    private int AssignValues(string card)
-    {
-        int cardsValue = 0;
-        int multi = 1;
-        for(int i = card.Length-1; i >= 0; i--)
-        {
-            cardsValue += values[card[i]] * multi;
-            multi *= 15;
-        }
-        return cardsValue;
     }
 }
