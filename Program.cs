@@ -25,3 +25,5 @@ new Day5().OutputValues();
 Console.WriteLine("\nDay 6:");
 new Day6().OutputValues();
 
+Console.WriteLine("\nDay 7:");
+new Day7().OutputValues();
