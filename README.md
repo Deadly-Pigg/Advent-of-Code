@@ -16,6 +16,14 @@ Day 4... Regex carried a lot here. Probably the easiest by far to deal with. All
 
 Day 5 was hard. Part 1's description threw me off for a bit, and part 2 was awful since I knew I couldn't just brute-force my way to the answer. I got it though, but I really hope the next few days are easier for my sanity
 
+Day 6 was the easiest by far. I initially bruteforced the solution, and even though it was fast, there was an even *FASTER* solution, which I obviously copied.
+
+Day 7 was the longest for me by far. It wasn't necessarily hard, per-se, but it was just really monotonous as I had to do many things before even getting close to the solution (which was first parse the input, sort, then add the sums. Easier said than done)
+
+Day 8 was... interesting. It was a bit difficult (Day 5 was still the worst), and I couldn't just brute-force my way to the part 2 solution even if I wanted (I predicted it would've took 15 days. I dont have that much time and electricity). Was quite satisfying when I got the solution, though!
+
+Day 9 was deceptively easy. I brute-forced my way to the solution using recursion, but I thought I would have to do some maths to get a fast solution. Luckily, brute-force worked just fine. I'll probably look around for a better solution though. Part 2 was a joke for Day 9.
+
 ## Miscellanous
 Example of others who do Advent of Code: 
 
