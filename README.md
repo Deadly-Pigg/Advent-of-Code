@@ -26,6 +26,8 @@ Day 9 was deceptively easy. I brute-forced my way to the solution using recursio
 
 Day 10. Well, a solution is a solution I guess...
 
+Day 11 was the fastest for me yet. I guess once you do day 10 and suffer through it for ages, day 11 just feels incredibly easy, even though it's not (day 6 was)
+
 ## Miscellanous
 Example of others who do Advent of Code: 
 
