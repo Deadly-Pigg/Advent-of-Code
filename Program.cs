@@ -3,10 +3,10 @@
 //if you are stuck, I'd suggesting using the testcases that are provided by the website (or, if you are really stuck, compare your code with mine, or just try and understand the approach I used). 
 //I purged my puzzle inputs from the github, and if you are curious why, read the README.md document.
 
-//Credit goes to @mohfez for the initial idea and @VictorVictini for the improvement (both on github)
+//Credit goes to @mohfez and @VictorVictini on github for the idea
 
 new Day0().OutputValues(); //for initialising the 'Days' program. You can ignore this as it just ensures the benchmark works as intended.
-
+/*
 Console.WriteLine("\nDay 1:");
 new Day1().OutputValues();
 
@@ -27,3 +27,15 @@ new Day6().OutputValues();
 
 Console.WriteLine("\nDay 7:");
 new Day7().OutputValues();
+
+Console.WriteLine("\nDay 8:");
+new Day8().OutputValues();
+
+Console.WriteLine("\nDay 9:");
+new Day9().OutputValues();
+
+Console.WriteLine("\nDay 10:");
+new Day10().OutputValues();
+*/
+Console.WriteLine("\nDay 11:");
+new Day11().OutputValues();
