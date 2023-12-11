@@ -24,6 +24,8 @@ Day 8 was... interesting. It was a bit difficult (Day 5 was still the worst), an
 
 Day 9 was deceptively easy. I brute-forced my way to the solution using recursion, but I thought I would have to do some maths to get a fast solution. Luckily, brute-force worked just fine. I'll probably look around for a better solution though. Part 2 was a joke for Day 9.
 
+Day 10. Well, a solution is a solution I guess...
+
 ## Miscellanous
 Example of others who do Advent of Code: 
 
