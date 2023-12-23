@@ -28,6 +28,16 @@ Day 10. Well, a solution is a solution I guess...
 
 Day 11 was the fastest for me yet. I guess once you do day 10 and suffer through it for ages, day 11 just feels incredibly easy, even though it's not (day 6 was)
 
+Day 12 I was unable to get more than 1 star (as of writing). Sad day. Also ruined my flow and as such didn't stick with doing the advent of codes on the days they're given
+
+Day 13 was a fresh breath of air... from day 12 hell. Wasn't too bad
+
+Day 14 I found alright. I had to hard-code in certain parts of my code, which isn't alright, but it runs
+
+Day 15 was easy. No other comments
+
+Day 16 I had to bruteforce. Sad day, as I couldn't use memoization for it like I had hoped (still runs in ~1 second so it's nothing too awful)
+
 ## Miscellanous
 Example of others who do Advent of Code: 
 
